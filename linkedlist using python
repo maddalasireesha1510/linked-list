@@ -1,0 +1,30 @@
+class Node:
+    def _init_(self,val):
+        self.data=val
+        self.next=None
+##n1=Node(10)
+##n2=Node(20)
+##n1.next=n2
+##n1.next.data
+head=None#
+def insert_end(val):
+    nn=Node(val)#10
+    if head==None:
+        head=nn#
+        print(head)
+    else:
+        temp=head
+        while temp.next:
+            temp=temp.next
+        temp.next=nn
+def display():
+    global head
+    temp=head
+    while temp:
+        print(temp.data)
+        temp=temp.next
+
+n=int(input())  
+for i in range(n):
+    val=int(input())#10,20,30
+    insert_end(val):
